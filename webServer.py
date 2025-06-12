@@ -40,13 +40,13 @@ def webServer(port=13331):
       #header = b"HTTP/1.1 200 OK\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n"
       #connectionSocket.send(header)
       #Note that a complete header must end with a blank line, creating the four-byte sequence "\r\n\r\n" Refer to https://w3.cs.jmu.edu/kirkpams/OpenCSF/Books/csf/html/TCPSockets.html
-      
+      outputdata += "<html><head></head><body>".encode()
       #Fill in end******************
-               
+              
       for i in f: #for line in file
           outputdata += filedata[i]#Fill in start********** - append your html file contents #Fill in end********** 
 
-      outputdata += "\r\n".encode()
+      outputdata += "</body></html><\r\n>".encode()
       #Send the content of the requested file to the client (don't forget the headers you created)!
       #Send everything as one send command, do not send one line/item at a time!
 
