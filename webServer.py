@@ -46,7 +46,7 @@ def webServer(port=13331):
       #Fill in end******************
       #print(outputdata)    
       for i in range(0, len(filedata)): #for line in file
-          print(i)
+          #print(i)
           outputdata += filedata[i]#Fill in start********** - append your html file contents #Fill in end********** 
 
       outputdata += ("\r\n".encode())
